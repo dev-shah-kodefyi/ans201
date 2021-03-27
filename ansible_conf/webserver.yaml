@@ -4,10 +4,10 @@
 - hosts: web
   become: yes
   tasks:
-  - name: Install Apache Packages 
-    apt: name=apache2 state=present
+          #- name: Install Apache Packages 
+          #apt: name=apache2 state=present
 
-  - name: Deploy Custom Web Page
+  - name: Deploy Custom Web Page(RoolBack)
     copy: src=files/index.html dest=/var/www/html/info.html
 
   - name: Start Apache Service

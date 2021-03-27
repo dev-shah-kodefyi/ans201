@@ -1,0 +1,11 @@
+---
+- name: Rebooting System
+  hosts: 'web'
+  gather_facts: no
+  
+  become: yes
+ 
+  tasks:
+    - name: Reboot the machine (Wait for 5 min)
+      reboot:
+        reboot_timeout: 300
